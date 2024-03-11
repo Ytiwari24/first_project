@@ -3,10 +3,14 @@ import { AppController } from './app.controller';
 import { AppService } from './app.service';
 import { CatsModule } from './cats/cats.module';
 import { TypeOrmModule } from '@nestjs/typeorm';
+import { MulterModule } from '@nestjs/platform-express';
 
 @Module({
   // imports: [CatsModule],
   imports: [
+    MulterModule.register({
+      dest: './uploads', // Destination folder for uploaded files
+    }),
     TypeOrmModule.forRoot({
       type: 'mysql',
       host: 'localhost',
