@@ -1,25 +1,12 @@
-// import { Test, TestingModule } from '@nestjs/testing';
-// import { CatsController } from './cats.controller';
-
-// describe('CatsController', () => {
-//   let controller: CatsController;
-
-//   beforeEach(async () => {
-//     const module: TestingModule = await Test.createTestingModule({
-//       controllers: [CatsController],
-//     }).compile();
-
-//     controller = module.get<CatsController>(CatsController);
-//   });
-
-//   it('should be defined', () => {
-//     expect(controller).toBeDefined();
-//   });
-// });
-
-
-// src/cats/cats.controller.ts
-import { Controller, Get, Post, Put, Delete, Param, Body } from '@nestjs/common';
+import {
+  Controller,
+  Get,
+  Post,
+  Put,
+  Delete,
+  Param,
+  Body,
+} from '@nestjs/common';
 import { CatsService } from './cats.service';
 import { Cat } from './cat.entity';
 
@@ -52,3 +39,25 @@ export class CatsController {
     return this.catsService.remove(Number(id));
   }
 }
+
+// import { Test, TestingModule } from '@nestjs/testing';
+// import { CatsController } from './cats.controller';
+
+// describe('CatsController', () => {
+//   let controller: CatsController;
+
+//   beforeEach(async () => {
+//     const module: TestingModule = await Test.createTestingModule({
+//       controllers: [CatsController],
+//     }).compile();
+
+//     controller = module.get<CatsController>(CatsController);
+//   });
+
+//   it('should be defined', () => {
+//     expect(controller).toBeDefined();
+//   });
+
+// });
+
+// src/cats/cats.controller.ts
